@@ -1,0 +1,21 @@
+name: CI Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodni yuklash
+        uses: actions/checkout@v3
+
+      - name: Python o‘rnatish
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Kutubxonalarni o‘rnatish
+        run: pip install -r requirements.txt
+
+      - name: Testlarni ishga tushirish
+        run: pytest
