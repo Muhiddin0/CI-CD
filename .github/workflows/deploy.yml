@@ -22,5 +22,4 @@ jobs:
           script: |
             cd /home/projects/CI-CD  # Loyihang joylashgan katalogga o‘t
             git pull origin main  # Kodni GitHub'dan yangilash
-            pip install -r requirements.txt  # Python kutubxonalarni o‘rnatish
             systemctl restart ci-test  # Xizmatni qayta ishga tushirish
