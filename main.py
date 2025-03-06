@@ -7,6 +7,7 @@ app = Flask(__name__)
 def home():
     return {
         "message": "Hello, World!",
+        "version": "1.0.0",
     }
 
 
